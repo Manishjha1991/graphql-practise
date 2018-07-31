@@ -5,7 +5,7 @@
     "author": "XelpmocDesignandTechPvtLtd",
     "license": "MIT",
     "scripts": {
-        "dev-server": "rm -rf logs && mkdir logs && nodemon --exec \"nodemon --exec NODE_ENV=development babel-node --inspect src\"",
+        "dev-server": "nodemon --exec \" cross-env nodemon --exec NODE_ENV=development babel-node --inspect src\"",
         "build": "babel -d ./build src && rm -rf logs && mkdir logs",
         "start": "yarn run build  && pm2 startOrRestart ecosystem.config.js ",
         "test": "rm -rf logs && mkdir logs && NODE_ENV=test jest --forceExit --runInBand",
